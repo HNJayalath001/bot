@@ -18,7 +18,7 @@ function App() {
       // Process user input
       const question = input.trim().toLowerCase();
       const matchedQuestion = questionsData.questions.find(q => q.question.toLowerCase() === question);
-      const answer = matchedQuestion ? matchedQuestion.answer : "Sorry, I don't understand that question.";
+      const answer = matchedQuestion ? matchedQuestion.answer : "I have no idea about this question.";
       
       // Update messages state with user input and bot response
       setMessages([...messages, { type: 'user', text: input }, { type: 'bot', text: answer }]);
